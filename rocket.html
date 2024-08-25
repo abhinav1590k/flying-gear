@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>untoldcoding</title>
+    <style>
+        
+            body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #b784db;
+}
+.envelope {
+  position: relative;
+  cursor: pointer;
+}
+
+.back {
+  position: relative;
+  width: 400px; /* Increased width */
+  height: 300px; /* Increased height */
+  background: #6247aa;
+}
+.front {
+  position: absolute;
+  border-right: 200px solid #815ac0; /* Adjusted border width */
+  border-top: 150px solid transparent; /* Adjusted border height */
+  border-bottom: 150px solid transparent; /* Adjusted border height */
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 200px; /* Adjusted left position */
+  z-index: 3;
+}
+.front:before {
+  content: "";
+  position: absolute;
+  border-left: 200px solid #815ac0; /* Adjusted border width */
+  border-top: 150px solid transparent; /* Adjusted border height */
+  border-bottom: 150px solid transparent; /* Adjusted border height */
+  height: 0;
+  width: 0;
+  top: -150px; /* Adjusted top position */
+  left: -200px; /* Adjusted left position */
+}
+.front:after {
+  content: "";
+  position: absolute;
+  border-bottom: 155px solid #7251b5; /* Adjusted border height */
+  border-left: 195px solid transparent; /* Adjusted border width */
+  border-right: 195px solid transparent; /* Adjusted border width */
+  height: 0;
+  width: 0;
+  top: -5px;
+  left: -200px; /* Adjusted left position */
+}
+.top {
+  position: absolute;
+  border-top: 155px solid #9163cb; /* Adjusted border height */
+  border-left: 195px solid transparent; /* Adjusted border width */
+  border-right: 195px solid transparent; /* Adjusted border width */
+  height: 0;
+  width: 0;
+  top: 0;
+  transform-origin: top;
+  transition: 0.4s;
+}
+.envelope:hover .top {
+  transform: rotateX(160deg);
+}
+.letter {
+  position: absolute;
+  background: white;
+  width: 380px; /* Increased width */
+  height: 280px; /* Increased height */
+  top: 10px;
+  left: 10px;
+  transition: 0.2s;
+}
+.envelope:hover .letter {
+  transform: translateY(-100px);
+  z-index: 2;
+}
+.text1 {
+  position: absolute;
+  color: white;
+  font-family: sans-serif;
+  top: -50%;
+}
+.text {
+  text-align: center;
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+  font-weight: bold;
+  color: black;
+  position: relative;
+  top: -20px;
+  left: 20px;
+}
+
+/*---heart -----*/
+.heart {
+  background-color: red;
+  height: 70px;
+  width: 70px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  transform: rotate(-45deg);
+  box-shadow: -5px 10px 90px red;
+  animation: untoldcoding 0.8s linear infinite;
+}
+
+@keyframes untoldcoding {
+  0% {
+    transform: rotate(-45deg) scale(1.05);
+  }
+  70% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(0.8);
+  }
+}
+.heart:before {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-color: red;
+  top: -40px;
+  border-radius: 50px;
+}
+.heart:after {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-color: red;
+  right: -40px;
+  border-radius: 50px;
+}
+  /* ... (rest of the styles remain the same) */
+
+  /* Add media queries for phone responsiveness */
+  @media only screen and (max-width: 768px) {
+    .envelope {
+      width: 300px; /* Adjust envelope width for phone */
+      height: 220px; /* Adjust envelope height for phone */
+    }
+    .back {
+      width: 300px; /* Adjust back width for phone */
+      height: 220px; /* Adjust back height for phone */
+    }
+    .front {
+      border-right: 150px solid #815ac0; /* Adjust front border width for phone */
+      border-top: 100px solid transparent; /* Adjust front border height for phone */
+      border-bottom: 100px solid transparent; /* Adjust front border height for phone */
+      left: 150px; /* Adjust front left position for phone */
+    }
+    .front:before {
+      border-left: 150px solid #815ac0; /* Adjust front:before border width for phone */
+      top: -100px; /* Adjust front:before top position for phone */
+      left: -150px; /* Adjust front:before left position for phone */
+    }
+    .front:after {
+      border-bottom: 105px solid #7251b5; /* Adjust front:after border height for phone */
+      border-left: 145px solid transparent; /* Adjust front:after border width for phone */
+      border-right: 145px solid transparent; /* Adjust front:after border width for phone */
+      top: -5px; /* Adjust front:after top position for phone */
+      left: -150px; /* Adjust front:after left position for phone */
+    }
+    .letter {
+      width: 280px; /* Adjust letter width for phone */
+      height: 200px; /* Adjust letter height for phone */
+    }
+    .text {
+      font-size: 10px; /* Adjust text font size for phone */
+    }
+    .heart {
+      height: 50px; /* Adjust heart height for phone */
+      width: 50px; /* Adjust heart width for phone */
+    }
+  }
+</style>
+  </head>
+  <body>
+    <div class="envelope">
+      <div class="back"></div>
+      <div class="letter">
+        <div class="heart"></div>
+        <div class="text">
+          <p>
+            <a href="rck.html">
+                <button>click here</button>
+              </a>
+            
+            Sachi/Barbie doll/apsara/pookie!!<br />
+            merko bolna ha kuch <br />
+            i can't express so i made <br />
+            this for you <br>
+            subha jo bola sorry <br>
+
+ 
+          </p>
+          
+        </div>
+      </div>
+      <div class="front"></div>
+      <div class="top"></div>
+      <div class="shadow"></div>
+      <div class="text1">
+        <h2>Hey! Pookie Maine kuch bnaya ha click kar ispe</h2>
+        
+      </div>
+    </div>
+  </body>
+</html>
